@@ -26,8 +26,8 @@
             do
             {
                 Console.WriteLine("У Вас есть питомец? (\"Да/Нет\")");
-                pet = Console.ReadLine();
-            } while (!(pet.ToLower() == "да" || pet.ToLower() == "нет"));
+                pet = Console.ReadLine().ToLower();
+            } while (!(pet == "да" || pet == "нет"));
 
             User.HavingPet = pet == "да" ? true : false;
             if (User.HavingPet)
